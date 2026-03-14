@@ -159,3 +159,32 @@ margin-top: 100px;
     box-shadow: 4px 4px 12px black;
     margin-top: 100px;
 }
+
+
+
+@media (max-width: 768px){
+
+header h1{
+font-size: 40px;
+}
+
+header h3{
+font-size: 14px;
+letter-spacing: 3px;
+}
+
+#hakkinda{
+width: 90%;
+margin: auto;
+padding: 20px;
+}
+
+#hakkinda h2{
+font-size: 28px;
+}
+
+#hakkinda p{
+font-size: 16px;
+}
+
+}
