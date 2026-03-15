@@ -218,4 +218,8 @@ margin-top: 100px;
         margin: 0;
         margin-top: 5px;
     }
+    #hakkında{
+        max-width: 90%;
+        margin: auto;
+    }
 }
