@@ -88,19 +88,18 @@ margin-bottom: -1vw;
 @media (max-width:768px) {
 .solmenü{
     width: 100%;
-    height: 10vh;
+    height: 15vw;
     flex-direction: row;
     display: flex;
     justify-content: center;
-;
     }
 .sağgörsel{
     width: 100%;
     margin-left: 0%;
-    margin-top: 10vh;
+    margin-top: 5vh;
     }
 .logo{
-margin-top: -3vw;
+margin-top: -2vw;
 margin-bottom: -1vw;
 }
 .logo img{
@@ -122,9 +121,11 @@ ul .liste{
     display: none;
 }
  .hero{
-     margin: 10vw 23vw;
+     margin: 10vw 15vw;
+     font-size: 4vw;
  }
  .uyarı{
-    margin: 14vw 23vw;
+    margin: 15vw 18vw;
+    font-size: 3vw;
  }
 }
