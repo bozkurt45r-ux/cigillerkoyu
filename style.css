@@ -1,111 +1,130 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-.çiğiller{
-    list-style: none;
-    text-align: center;
-    font-size: 1.4vw;
-    margin: 0;
-    padding: 0;
-    margin-top: 2vw;
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: -2vw;
 }
 
-.conteynir{
-        display: flex;
-    }
-.bar{
-    width: 20%;
-    background: #f5f5f5;
-    box-shadow: 3px 3px 20px black;
+/*-- ANA MENÜ VE ANA SAYFA --*/
+.üstmenü{
+    display: flex;
+    flex-direction: row;
+}
+.solmenü{
+    background-color: white;
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 4px 4px 20px black;
     z-index: 1;
+    position: fixed;
 }
-.koy{
-    flex: 1;
+.sağgörsel{
+    background-color: red;
+    width: 75%;
+    height: 100vh;
     position: relative;
+    margin-left: 25%;
 }
-img{
+.üstmenübir{
+    position: absolute;
     width: 100%;
-   display: block;
-    
+}
+.img img{
+    width: 100%;
+    position: relative;
+    display: block;
 }
 .overlay{
-    position: absolute;
+    background-color: black;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black;
-    z-index: 3;
+    position: absolute;
     opacity: 0.4;
 }
 .hero{
     position: absolute;
-    margin: 0;
-    padding: 0;
-    margin-top: -52.3vw;
-    margin-left: 6.5vw;
-     font-family: "Montserrat", sans-serif;
-     text-align: center;
-     font-size: 4vw;
-     color: white;
-     text-shadow: 4px 4px 8px black;
-     z-index: 3;
-}
-}
-.nav{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    font-size: 1.2vw;
-    padding-top: 0vw;
-    padding-left: 1.9vw;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 3vw;
+    margin: 10vw 12vw;
     font-family: "Montserrat", sans-serif;
+    text-shadow: 2px 2px 15px black;
 }
-.nav1, .nav2, .nav3, .nav4{
-    padding-block: 1vw;
-    text-align: center;
+.uyarı{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-size: 2.5vw;
+    margin: 14vw 12vw;
+    font-family: "Montserrat", sans-serif;
+    text-shadow: 2px 2px 15px black;
+}
+.logo{
+margin-top: -2vw;
+margin-bottom: -1vw;
+}
+.logo img{
+    width: 15vw;
+}
+.liste{
+   list-style: none;
+   font-size: 1.5vw;
+   padding: 0.8vw;
+   text-align: center;
+   font-family: "Montserrat", sans-serif;
+}
+.liste .iki{
+    font-size: 0.7vw;
 }
 
 
-/*-- MOBİL UYUM --*/
-@media screen and (max-width: 768px) {
-    .koy{
-    position: absolute;
-    flex: none;
+/* -- MOBİL UYUM ANA MENÜ VE ANA SAYFA -*/
+@media (max-width:768px) {
+.solmenü{
+    width: 100%;
+    height: 10vh;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+;
+    }
+.sağgörsel{
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 10vh;
+    }
+.logo{
+margin-top: -3vw;
+margin-bottom: -1vw;
 }
-.koy img{
-position: relative;
-
-    
+.logo img{
+    width: 10vw;
 }
-.
-.koy p{
-    position: relative;
+.liste{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
 }
-.conteynir{
-    position: absolute;
+.liste .iki{
+    font-size: 0.7vw;
 }
-.nav1, .nav2, .nav3, .nav4{
-    padding: 1vw;
-    text-align: center;
+ul .liste{
+    white-space: nowrap;
+    margin-bottom: 2.4vw;
 }
-.bar{
-    position: relatives;
-    background-color: white;
-    width: 50%;W
-}W
-h1{
-    position: absolute;
+.liste .iki{
+    display: none;
 }
-.nav{
- background-color: white;
-position: absolute;
+ .hero{
+     margin: 10vw 23vw;
+ }
+ .uyarı{
+    margin: 14vw 23vw;
+ }
 }
