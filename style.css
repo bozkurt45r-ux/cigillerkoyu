@@ -85,7 +85,7 @@ margin-bottom: -1vw;
 
 
 /* -- MOBİL UYUM ANA MENÜ VE ANA SAYFA -*/
-@medi (max-width:768px) {
+@media (max-width:768px) {
 .solmenü{
     width: 100%;
     height: 20vw;
