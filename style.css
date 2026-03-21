@@ -85,47 +85,49 @@ margin-bottom: -1vw;
 
 
 /* -- MOBİL UYUM ANA MENÜ VE ANA SAYFA -*/
-@media (max-width:768px) {
+@medi (max-width:768px) {
 .solmenü{
     width: 100%;
-    height: 15vw;
+    height: 20vw;
     flex-direction: row;
     display: flex;
     justify-content: center;
-    }
+    padding-left: 3vw;
+    padding-bottom: 2.5vw;
+}
 .sağgörsel{
     width: 100%;
-    margin-left: 0%;
-    margin-top: 5vh;
-    }
-.logo{
-margin-top: -2vw;
-margin-bottom: -1vw;
-}
-.logo img{
-    width: 10vw;
-}
-.liste{
- display: flex;
- flex-direction: row;
- justify-content: center;
-}
-.liste .iki{
-    font-size: 0.7vw;
-}
-ul .liste{
+    margin-left: 0;
+    margin-top: 20vw; 
+ }
+ .liste{
+    display: flex;
+    flex-direction: row;
     white-space: nowrap;
-    margin-bottom: 2.4vw;
-}
-.liste .iki{
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+    padding-top: 3vw;
+    padding-right: 2vw;
+ }
+ .liste li{
+    background-color: #2f5d34;
+    color: white;
+    border-radius: 1.5vw;
+    font-size: 2vw;
+    padding: 1.5vw 2.5vw;    
+         box-shadow: 2px 2px 8px black;
+ }
+ .liste .iki{
     display: none;
-}
- .hero{
-     margin: 10vw 15vw;
-     font-size: 4vw;
  }
- .uyarı{
-    margin: 15vw 18vw;
-    font-size: 3vw;
+ .logo{
+    box-shadow: 2px 2px 8px black;
+    height: 25vw;
+    margin-bottom: 0.5vw;
  }
-}
+ .hero, .uyarı{
+    top: 0;
+    left: 0;
+ }
+ 
