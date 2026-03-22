@@ -8,33 +8,11 @@
 .üstmenü{
     display: flex;
     flex-direction: row;
-}
-.solmenü{
-    background-color: white;
-    width: 25%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 4px 4px 20px black;
-    z-index: 1;
-    position: fixed;
+    justify-content: flex-start;
 }
 .sağgörsel{
-    background-color: grey;
     width: 75%;
-    height: 100vh;
-    position: relative;
     margin-left: 25%;
-}
-.üstmenübir{
-    position: absolute;
-    width: 100%;
-}
-.img img{
-    width: 100%;
-    position: relative;
-    display: block;
 }
 .overlay{
     background-color: black;
@@ -45,90 +23,122 @@
     position: absolute;
     opacity: 0.2;
 }
-.hero{
+.img img{
+    width: 100%;
+     display: block;
+}
+.img{
+    position: relative;
+}
+.logo img{
+    width: clamp(80px, 15vw, 200px);
+    margin-top: -2vw;
+}
+.solmenü{
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100vh;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    box-shadow: 2px 2px 8px black;
+}
+.img h1{
     position: absolute;
     top: 0;
     left: 0;
+    font-size: clamp(0px,3vw, 100px);
+    margin-top: 10%;
+    margin-left: 2vw;
     color: white;
-    font-size: 3vw;
-    margin: 10vw 12vw;
-    font-family: "Montserrat", sans-serif;
-    text-shadow: 2px 2px 15px black;
 }
-.uyarı{
-    position: absolute;
+.img p{
+  position: absolute;
     top: 0;
-    right: 0;
-    color: white;
-    font-size: 2.5vw;
-    margin: 14vw 12vw;
+    left: 0;
+    font-size: clamp(0px,3vw, 100px);
+    margin-top: 15%;
+    color: #2f5d34;
+    background-color: white;
+}
+.liste .bir{
     font-family: "Montserrat", sans-serif;
-    text-shadow: 2px 2px 15px black;
+    font-size: clamp(0px, 1.5vw, 35px);
+    padding: 1vw;
+    list-style: none;
 }
-.logo{
-margin-top: -2vw;
-margin-bottom: -1vw;
+section{
+    margin-left: 25%;
+    margin-top: 3vw;
 }
-.logo img{
-    width: 15vw;
+section h3, p{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
 }
-.liste{
-   list-style: none;
-   font-size: 1.5vw;
-   padding: 0.8vw;
-   text-align: center;
-   font-family: "Montserrat", sans-serif;
+section h3{
+    font-size: clamp(0px,3vw, 100px);
 }
-.liste .iki{
-    font-size: 0.7vw;
+section p{
+    font-size: clamp(0px,2vw, 100px);
+    margin: 0.2vw 2vw;
 }
+
+
+
+/*-- KÖY HAKKINDA --*/
 
 
 /* -- MOBİL UYUM ANA MENÜ VE ANA SAYFA -*/
-@media (max-width:768px) {
+@media (max-width: 1000px) {
+.üstmenü{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .solmenü{
     width: 100%;
-    height: 20vw;
-    flex-direction: row;
+    height: 10vh;
     display: flex;
-    justify-content: center;
-    padding-left: 3vw;
-    padding-bottom: 2.5vw;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 15px;
+    gap: 15px;
 }
 .sağgörsel{
     width: 100%;
+    margin-top: 10vh;
     margin-left: 0;
-    margin-top: 20vw; 
- }
- .liste{
+}
+.img img{
+    width: 100%;
+}
+.logo img{
+    width: clamp(10px, 14vw, 80px);
+    margin-top: -2vw;
+}
+  .liste{
     display: flex;
     flex-direction: row;
-    white-space: nowrap;
     flex-wrap: wrap;
-    gap: 2vw;
     justify-content: center;
-    padding-top: 3vw;
-    padding-right: 2vw;
- }
- .liste li{
+    gap: clamp(0px, 5px, 10px);
+  }
+  .liste li{
     background-color: #2f5d34;
+    border-radius: 8px;
     color: white;
-    border-radius: 1.5vw;
-    font-size: 2vw;
-    padding: 1.5vw 2.5vw;    
-         box-shadow: 2px 2px 8px black;
- }
- .liste .iki{
+  }
+  .iki{
     display: none;
- }
- .logo{
-    box-shadow: 2px 2px 8px black;
-    height: 25vw;
-    margin-bottom: 0.5vw;
- }
- .hero, .uyarı{
-    top: 0;
-    left: 0;
- }
+  }
+  .liste .bir{
+    white-space: nowrap;
+    font-size: clamp(0px, 2vw, 35px);
+    padding: ;
+    line-height: 15px;
+  }
+  }
 }
  
