@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root{
-  --ana-yesil: #2f5d34;
-  --koyu-yesil: #1f3f25;
+  --ana-mavi: #2A6F97;
+  --açik-mavi: #A9D6E5;
   --acik-yesil: #7fa889;
   --soft-yesil: #dfeee2;
   --bej: #f5f3eb;
@@ -18,51 +19,47 @@
 
 /*--SAĞ GÖRSEL--*/
 .container{
-   display: flex;
-   background-color: var(--soft-yesil);
+   background-color: var(--açik-mavi);;
 }
 .solmenü{
-    background-color: white;
-    width: 22%;
-    height: 96vh;
+    background-color: #2A6F97;
+    width: 18vw;
+    height: 102vh;
     display: flex;
     text-align: center;
     justify-content: center;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.5);
     z-index: 2;
     position: fixed;
-    margin: 1vw 1vw;
+  
 }
 .saggorsel{
-   background-color: var(--soft-yesil);
    flex: 1;
    height: auto;
-   margin-left: 23%;
+   margin-left: 18vw;
 }
 .logo{
-    width: 12vw;
+    width: 14vw;
     margin-top: vw;
 }
 .liste{
     display: flex;
     flex-direction: column;
     list-style: none;
-    font-family: "montserrat", sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     gap: 1.6vw;
     margin-top: -2vw;
+    color: white;
+    margin-left: -0.2vw;
 }
 .iki{
-    font-size: 1.2vw;
+    font-size: 0.8vw;
 }
 .img img{
-    width: 96%;
+    width: 100%;
     height: clamp(154px, 52.6vw, 908px);
-    border-radius: 10px;
-    display: block;
-    margin-top: 1.1vw;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: block;;
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.5);
 }
 .img{
     display: flex;
@@ -70,92 +67,129 @@
     align-items: center;
     position: relative;
 }
-.overlay{
-   top: 0;
-   left: 0;
-   width: 98%;
-   height: 100%;
-   border-radius: 12px;
-   background-color: black;
-  
-}
 .img h1{
     position: absolute;
     color: white;
     font-size: 3vw;
-    margin-top: 7vw;
+    margin-top: 9vw;
+    margin-left: -20vw;
     text-shadow: 2px 2px 8px black;
-    font-family: "montserrat", sans-serif;
 }
-.img p{
+.img .uyari{
     position: absolute;
     color: white;
     font-size: 2.2vw;
-    margin-top: 15vw;
+    margin-top: 17vw;
+    margin-left: -16vw;
     text-shadow: 2px 2px 8px black;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #1f3f25;
-    display: inline-block;
-    padding: 1vw 10.3vw;
 }
 
+
 /*--KÖY HAKKINDA--*/
-.koyhakkinda{
+.bilgiler{
+    backdrop-filter: blur(10px);
+    background-color: rgb(42, 111, 151, 0.7);
+    width: 25vw;
+    height: 28.5vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 33vw 5vw;
+    border-radius: 0.5vw;
     text-align: center;
-    font-size: 1.5vw;
-    font-family: "montserrat", sans-serif;
-    padding: 3vw 3vw;
+    font-size: 1.1vw;
+    padding: 2vw 4vw;
+    color: white;
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.5);
 }
-.koyhakkinda p{
+.bilgiler p{
     padding-top: 0.5vw;
 }
+#bilgi{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+
 
 /*--FOTOĞRAF ARŞİVİ--*/
  .fotoarsiv{
     text-align: center;
-    font-size: 1.5vw;
-    font-family: "montserrat", sans-serif;
-    background-color: var(--acik-yesil);
-    width: 96%;
-    border-radius: 10px;
-    margin-left: 1.7vw;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    font-size: 1.5vw;;
+    width: 45vw;
+    margin-left: auto;
+    margin-top: 3vw;
+    margin-right: 3vw;
+ }
+ .fotoarsiv h2{
+    display: bloc;
+    width: fit-content;
+    margin: 0.5vw auto;
+    background-color: var(--ana-mavi);
     color: white;
-    font-family: "montserrat", sans-serif;
-
+    padding: 0.8vw 1.5vw;
+    border-radius: 0.5vw;
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.5);
  }
 .arsiv img{
     width: 100%;
-    border-radius: 10px;
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.5);
+     border-radius: 0.5vw;
 }
 .arsiv{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 0.5vw 1.2vw;
     padding: 1vw 2vw;
+}
+.devambtn{
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+    margin: 0.1vw auto;
+    background-color: var(--ana-mavi);
+    color: white;
+    padding: 1vw 1.5vw;
+    border-radius: 0.5vw;
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/*-- DUYURULAR--*/
+.duyurular{
+    background-color: #1a1f1b;
+    width: 27vw;
+    height: 45vw;
+    position: absolute;
+    margin-top: -45vw;
+    margin-left: 3.6vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.5);
+     border-radius: 0.5vw;
+}
+.duyurular img{
+    width: 100%;
+    transform: scale(1.2);
+    display: block;
 }
 
 /*--GEÇMİŞTEN İZLER--*/
 .geçmiştenizler{
     text-align: center;
     font-size: 1.5vw;
-    font-family: "montserrat", sans-serif;
-    width: 96%;
-    margin-left: 1.7vw;
+    width: 100%;
     margin-top: 2vw;
-    font-family: "montserrat", sans-serif;
 }
 .geçmiştenizler img{
     width: 100%;
-    border-radius: 10px;
 }
 
 
 .iletisim h3{
     text-align: center;
     font-size: 2vw;
-    font-family: "montserrat", sans-serif;
     display: flex;
     justify-content: center;
     padding: 2vw;
