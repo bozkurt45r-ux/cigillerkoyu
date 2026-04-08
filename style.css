@@ -2,11 +2,10 @@
 
 :root {
     --bg-color: #080808;
-    --second-bg-color: #131313;
+    --second-bg-color: rgb(19, 19, 19);
     --text-color: #fff;
     --main-color: #e30a17;
     font-size: 62.5%;
-    width: 100%;
 }
 
 * {
@@ -18,287 +17,123 @@
     scroll-behavior: smooth;
     font-family: "Montserrat", sans-serif;
     color: #fff;
+    list-style: none;
 }
 body{
-    background-color: #080808;
-    overflow-x: hidden
-}
-
-.allmenü{
-    display: flex;
-    justify-content: center;
-    max-width: 2460px;
-    margin: auto;
-}
-
-/*-- HEADER --*/
-.container{
-    display: flex;
-}
-
-
-/*-- SOLMENÜ --*/
-.solmenü{
-    width: 25rem;
-    height: 100vh;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+/*--NAVBARMENÜ--*/  
+nav{
+    width: 100%;
+    height: 20rem;
+    background-color: rgba(19, 19, 19, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     position: fixed;
+    z-index: 999;
 }
-.hamburger{
-    display: none;
+.navbar-list img{
+    height: 25rem;
 }
-.solmenü img{
-    width: 16rem;
-    margin-top: -8rem;
-}
-.liste{
-    list-style: none;
-    text-align: center;
+.navbar-list{
     display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    font-size: 1.8rem;
-}
-.liste b{
-    color: #E30A17;
-    font-size: 1.5rem;
-}
-     
-
-/*-- SAĞMENÜ --*/
-.sağmenü{
-    flex: 1;
-    margin-left: 25rem;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    position: relative;
+    gap: 4rem;
+    font-size: clamp(1rem,1.8vw,2.5rem);
+    font-weight: 500;
 }
-.sağmenü img{
+
+
+
+/*--HEADER--*/
+header{
+    position: relative;
+    margin-top: 20rem;
+}
+header img{
     width: 100%;
 }
-.sağmenü h1,
-.sağmenü .uyari{
-    color: var(--main-color);
-    position: absolute;
-    font-size: 3.3rem;
-    display: flex;
-    align-self: flex-start;
-}
-.sağmenü h1{
-    margin-top: 8rem;
-}
-.sağmenü .uyari{
-    margin-top: 16.5rem;
-    font-size: 2.2rem;
-    background-color: var(--main-color);
-    color: white;
+header h1{
+   position: absolute;
+   top: 8rem;
+   left: 0;
+   color: var(--main-color);
+   font-size: clamp(2rem,4vw,5rem);
+   text-align: center;
+   display: block;
+   width: 100%;
 }
 
-/*--KÖY HAKKINDA--*/
-.köyhakkinda{
-    background-color: rgba(227, 10, 23, 0.5);
-    backdrop-filter: blur(5px);
-    width: 70%;
-    height: 20rem;
-    padding: 20px 30px;
-    transform: translateY(-100px);
-    text-align: center;
+/*--SECTİON-*/
+section{
+    width: 60%;
+    height: 25rem;
+    background-color: var(--second-bg-color);
+    margin-top: -10rem;
+    z-index: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
 }
-.köyhakkinda h2{
-    font-size: clamp(2px,2.3vw,25px);
-}
-.köyhakkinda p{
-    font-size: clamp(2px,1.4vw,14px);
+section h2,
+section p{
+    padding: 1rem 5rem;
+    font-size: 1.3rem;
 }
 
-/*--FOTOARŞİV--*/
-.arsiv{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-
-}
-.fotoarsiv,
-.gecmiştenizler{
-    width: 46%;
-    background-color: var(--text-color);
-    margin-top: -5rem;
+/*-- ARTİCLE- FOTOARSİV--*/
+.fotoarsiv{
+    background-color: #fff;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 1rem;
-    padding: 4% 1rem;
-    position: relative;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    padding: 3rem;
+    width: 90%;
+    justify-self: center;
+    margin-top: 3rem;
 }
-.fotoarsiv img,
-.gecmiştenizler img{
+.fotoarsiv div{
+    aspect-ratio: 4/5;
+}
+.fotoarsiv img{
     width: 100%;
     height: 100%;
+    box-shadow: 0 0 25px black;
     object-fit: cover;
-    display: block;
-    box-shadow: 0 0 25px black;
 }
-.fotodört,
-.fotoüçç{
-    grid-row: span 2;
-}
-.baslik{
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-}
-.fotoarsiv span,
-.gecmiştenizler span{
-    position: absolute;
+
+.gecmistenizler{
+     background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    padding: 3rem;
+    width: 90%;
     justify-self: center;
+    margin-top: 3rem;
 }
-.fotoarsiv span h2,
-.gecmiştenizler span h2{
-    color: #E30A17;
-    font-size: 2rem;
+.gecmistenizler div{
+    aspect-ratio: 4/5;
 }
-
-/*-- MAP--*/
-.map{
-    width: 93%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--text-color);
-    font-size: 2rem;
-    text-align: center;
-    padding: 2rem;
-    margin: auto;
-    margin-top: 5rem;
-}
-.map iframe{
+.gecmistenizler img{
+   width: 100%;
+    height: 100%;
     box-shadow: 0 0 25px black;
+    object-fit: cover;
 }
-.map h3,
-.map p{
-    color: var(--bg-color);
-}
-
-/*--FOOTER--*/
-footer{
-    width: 100%;
-    margin-top: 5rem;
-    z-index: -1;
-}
-.footer{
-   display: flex;
-   box-shadow: 0 0 25px rgba(255, 255, 255, 0.24);
-   padding: 4rem;
-   gap: 4rem;
-   padding-bottom: 8rem;
-}
-.footer div{
-    width: 0.2rem;
-    height: 20vh;
-    background-color: #232121;
-}
-.footer ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-}
-.footer li{
-    padding-top: 1rem;
-}
-.cizgi{
-  position: absolute;
-  display: flex;
-  align-self: flex-end;
-  width: 95%;
-  height: 0.1rem;
-  background-color: #232121;
-  margin-bottom: -2rem;
-}
-.cizgi p{
-   position: absolute;
-  display: flex;
-  align-self: flex-end;
-  margin-bottom: -2rem;
-  font-size: 1.3rem;
-}
-
-
-
-@media (max-width: 768px) {
-.allmenü{
-    display: flex;
-    flex-direction: column;
-.solmenü{
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1;
-    width: 100%;
-    height: 15rem;
-    padding: 0 2rem;
-    backdrop-filter: blur(10px);
-    background-color:  rgba(8, 8, 8, 0.5);
-}
-.solmenü img{
-    margin: 0;
-    width: 11rem;
-    
-}
-.hamburger{
-    display: inline;
-    filter: invert(1);
-}
-.hamburger img{
-    width: 6rem;
-}
-.listcontainer{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    width: 50%;
-    height: 100vh;
-    background-color: var(--second-bg-color);
+.video{
     display: flex;
     justify-content: center;
-    align-items: center;
-    display: none;
+    margin-top: 5rem;
 }
-.listcontainer.aktif{
-    display: flex;
-}
-#menu{
-    display: flex;
-}
-.liste{
-    display: flex;
-    gap: 6rem;
-}
-.sağmenü{
-    margin-left: auto;
-    margin-top: 15rem;
-}
-/*--FOTOARŞİV--*/
-.arsiv{
-    flex-direction: column;
-    align-items: center;
-    gap: 6rem;
-}
-.fotoarsiv,
-.gecmiştenizler{
-    width: 98%;
-}
+.video video{
+    width: 90%;
 }
