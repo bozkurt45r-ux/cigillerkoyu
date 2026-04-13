@@ -13,10 +13,11 @@
   <body>
     <div class="container">
       <nav>
-        <ul class="liste">
+         <img src="img/logo.png" alt="" />
+         <img class="hamburger" id="hamburger" src="img/hamburger.png" alt="">
+        <ul class="liste" id="liste">
           <li>ANA SAYFA</li>
           <li>FOTOĞRAF ARŞİVİ</li>
-          <img src="img/logo.png" alt="" />
           <li>GEÇMİŞTEN İZLER</li>
           <li>DUYURULAR</li>
         </ul>
@@ -50,27 +51,28 @@
         </p>
       </section>
       <article>
+        <h2 id="köytarim">KÖYÜMÜZDE TARIM</h2>
         <div class="tarim">
           <div> <p>
                Köyümüzde tarım, uzun yıllar boyunca temel geçim kaynağı
                 olmuştur. 2000’li yıllara kadar köy ekonomisi büyük ölçüde tütün
                 üretimine dayanmaktaydı. Tütün, hem üretim miktarı hem de
-                ekonomik katkısı açısınsdan köy halkının en önemli gelir
+                ekonomik katkısı açısından köy halkının en önemli gelir
                 kaynağıydı. 2000’li yıllardan sonra ise tarımsal faaliyetlerde
                 önemli değişimler yaşanmıştır.
             </p>
           </div>
-           <img src="img/tütün.png" alt="">
+           <div><img src="tarımimg/tütün.avif" alt=""></div>
           <div> <p>
                  Bu dönemde bir süre haşhaş üretimi yapılmış, ardından zeytin
-                yetiştiriciliği ön plana çıkmaya başlssamıştır. Özellikle zeytin,
+                yetiştiriciliği ön plana çıkmaya başlamıştır. Özellikle zeytin,
                 bölgeye uygun yapısı sayesinde köyde yaygınlaşan önemli bir ürün
                 haline gelmiştir. Son yıllarda ise açılan sondaj kuyuları ile
-                birlikte sulu tarıma geçiş hız kazanmıştır.
+                birlikte sulu tarıma geçiş hız kazanmıştır, üretim çeşitliliği artmıştır
                </p>
           </div>
         </div>
-        <h2>FOTOĞRAF ARŞİVİ</h2>
+        <h2 id="fotoarsiv">FOTOĞRAF ARŞİVİ</h2>
         <div class="fotoarsiv">
           <div><img src="img/image.avif" alt=""></div>
           <div><img src="img/image-1.avif" alt=""></div>
@@ -108,5 +110,25 @@
         </div>
       </footer>
     </div>
+ <script>
+  const hamburger = document.getElementById("hamburger");
+  const liste = document.getElementById("liste");
+
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation(); // dış click'e gitmesin
+    liste.classList.toggle("active");
+  });
+
+  // Menü içi tıklamada kapanmasın
+  liste.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // BOŞ ALANA TIKLAYINCA KAPAT
+  document.addEventListener("click", () => {
+    liste.classList.remove("active");
+    hamburger.classList.remove("active");
+  });
+</script>
   </body>
 </html>

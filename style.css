@@ -1,188 +1,280 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --bg-color: #080808;
-    --second-bg-color: rgb(19, 19, 19);
-    --text-color: #fff;
-    --main-color: #e30a17;
-    font-size: 62.5%;
+  --bg-color: #080808;
+  --second-bg-color: rgb(19, 19, 19);
+  --text-color: #fff;
+  --main-color: #e30a17;
+  font-size: 62.5%;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: "Montserrat", sans-serif;
-    color: #fff;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  list-style: none;
 }
-body{
-    background-color: black;
-    overflow-x: hidden;
+body {
+  background-color: black;
+  overflow-x: hidden;
 }
-.container{
-    margin: auto;
-    max-width: 2560px;
+.container {
+  margin: auto;
+  max-width: 2560px;
 }
 header,
 section,
 article,
-footer{
-    margin-left: 25rem;
+footer {
+  margin-left: 25rem;
 }
 
-/*--NAVBARMENÜ--*/  
-nav{
-    width: 25rem;
-    height: 100vh;
-    background-color: var(--second-bg-color);
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.9rem;
-    font-weight: 600;
+/*--NAVBAR MENÜ SOL--*/
+.hamburger {
+  display: none;
 }
-nav img{
-   width: 80%;
+nav {
+  width: 25rem;
+  height: 100vh;
+  background-color: var(--second-bg-color);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 600;
 }
-nav img{
-    margin: -8rem;
+nav img {
+  width: 80%;
 }
-.liste{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
+nav img {
+  margin: -8rem;
 }
-nav h5{
-    position: absolute;
-    bottom: 4rem;
-    left: 0;
-    width: 100%;
-    color: var(--main-color);
-    font-size: 1.3rem;
+.liste {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+nav h5 {
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  width: 100%;
+  color: var(--main-color);
+  font-size: 1.3rem;
 }
 
+/*--HEADER SAĞ GÖRSEL--*/
+header img {
+  width: 100%;
+  margin-top: -10rem;
+  filter: brightness(1.2) contrast(1.1);
+}
+header h1 {
+  position: absolute;
+  top: 6rem;
+  margin-left: 2rem;
+  color: var(--main-color);
+  font-size: 2vw;
+}
 
-/*--HEADER--*/
-header img{
-    width: 100%;
-    margin-top: -10rem;
-    filter: brightness(1.2) contrast(1.1);
-}
-header h1{
-    position: absolute;
-    top: 6rem;
-    margin-left: 2rem;
-    color: var(--main-color);
-    font-size: 2vw;
-}
-/*--SECTİON-*/
-section{
-    justify-self: center;
-    width: 60%;
-    height: 20vw;
-    background-color: rgba(19, 19, 19, 0.5);
-    backdrop-filter: blur(10px);
-    padding: 2rem;transform: translateY(-10vw);
-    box-shadow: 0 0 2px white;
+/*--KÖY HAKKINDA-*/
+section {
+  justify-self: center;
+  width: 60%;
+  height: clamp(10px, 20vw, 200px);
+  background-color: rgba(19, 19, 19, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  transform: translateY(-10vw);
+  box-shadow: 0 0 2px white;
 }
 section h2,
-section p{
-    font-size: 1.2vw;
+section p {
+  font-size: clamp(1px, 1.2vw, 18px);
 }
-/*-- ARTİCLE- FOTOARSİV--*/
-article{
-    text-align: center;
+
+/*-- ARTİCLE KÖYDE TARIM--*/
+article {
+  text-align: center;
 }
-article h2{
-    font-size: 2.5vw;
+article h2 {
+  font-size: 2.5vw;
 }
-.tarim{
-    margin-top: -7rem;
+.tarim {
+  padding: 0 6rem;
+  display: flex;
+  align-items: center;
+}
+.tarim :nth-child(1) p {
+  text-align: end;
+  line-height: 1.6;
+  font-size: clamp(0.2px, 1vw, 30px);
+}
+.tarim :nth-child(3) p {
+  text-align: start;
+  line-height: 1.6;
+  font-size: clamp(0.2px, 1.03vw, 30px);
+}
+.tarim div {
+  width: 100%;
+}
+.tarim img {
+  width: 100%;
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+/*-- FOTOĞRAF ARŞİV--*/
+#fotoarsiv {
+  margin-top: 10rem;
+}
+.fotoarsiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  justify-self: center;
+  aspect-ratio: 12/8;
+  position: relative;
+}
+.fotoarsiv div {
+  background-color: #e30a17;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 0 8px black;
+  justify-self: center;
+}
+.fotoarsiv div:nth-child(5) {
+  grid-column: span 2;
+}
+.fotoarsiv div:nth-child(5) img {
+  margin: auto;
+  object-position: center 80%;
+}
+.fotoarsiv div:nth-child(4) img {
+  transform: scale(1.2);
+  object-position: 50% -350%;
+}
+.fotoarsiv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(1.2) contrast(1.1);
+}
+
+/*-- FOOTER ALTBİLGİ--*/
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+  text-align: center;
+  padding: 0 5rem;
+}
+.tümhak {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 2rem;
+  font-size: 1.8vw;
+}
+.tümhak h5 {
+  font-family: "Caveat", cursive;
+}
+.line {
+  width: 100%;
+  background-color: #fff;
+  height: 0.5px;
+  margin-top: 3.2rem;
+}
+.bilgi {
+  font-size: 1.5vw;
+  margin-top: 3.2rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  width: 100%;
+  font-size: 1.5vw;
+}
+
+/*-- MOBİL RESPONSİVE--*/
+@media (max-width: 768px) {
+  header,
+  section,
+  article,
+  footer {
+    margin-left: 0;
+  }
+
+  /*--NAVBAR MENÜ SOL--*/
+  nav {
+    width: 100%;
+    height: 15rem;
+    z-index: 999;
     display: flex;
-    align-items: center;
-    font-size: 1.5vw;
-    padding: 0 3rem;
-}
-.tarim img{
-    width: 40%;
-    margin: 0 -6vw;
-    z-index: -1;
-}
-.fotoarsiv{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem;  
-    width: 100%;
-    justify-self: center;
-    aspect-ratio: 12/8;
-    position: relative;
-}
-.fotoarsiv div{
-    background-color: #e30a17;
-    overflow: hidden;
-    width: 100%;
-    box-shadow: 0 0 8px black;
-    justify-self: center;
-}
-.fotoarsiv div:nth-child(5){
-    grid-column: span 2;
-}
-.fotoarsiv div:nth-child(5) img{
-    margin: auto;
-    object-position: center 80%;
-}
-.fotoarsiv div:nth-child(4) img{
-    transform: scale(1.2);
-    object-position: 50% -350%;
-}
-.fotoarsiv img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    filter: brightness(1.2) contrast(1.1);
-}   
-footer{
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20rem;
+  }
+  nav img {
+    width: 20%;
+  }
+  nav h5 {
+    display: none;
+  }
+  .hamburger {
+    display: inline;
+    filter: invert(1);
+    width: 13%;
+  }
+  .liste {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
     justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-    text-align: center;
-    padding: 0 5rem;
-} 
-.tümhak{
+    gap: 8rem;
+    background-color: #080808;
+  }
+  .liste.active {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
     display: flex;
-    align-items: center;
-    margin-top: 1rem;
-    gap: 2rem;
-    font-size: 1.8vw;
-}
-.tümhak h5{
-    font-family: "Caveat", cursive;
-}
-.line{
-    width: 100%;
-    background-color: #fff;
-    height: 0.5px;
-    margin-top: 3.2rem;
-}
-.bilgi{
-    font-size: 1.5vw;
-    margin-top: 3.2rem;
-}
-.footer{
-    display: flex;
-    justify-content: space-between;
-    text-align: start;
-    width: 100%;
-    font-size: 1.5vw;
+    justify-content: center;
+    gap: 8rem;
+    background-color: #080808;
+  }
+
+  /*--HEADER SAĞ GÖRSEL--*/
+  header img {
+    margin: auto;
+  }
 }
